@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import defaultStyle from "../../defaultStyle";
 
-export const Container = styled.View`
+export const Container = styled.SafeAreaView`
   flex: 1;
   justify-content: center;
   padding: 20px;
@@ -12,6 +12,7 @@ export const Title = styled.Text`
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+  color: ${defaultStyle.brandSecondary};
 `;
 
 export const SubTitle = styled.Text`
@@ -36,6 +37,7 @@ export const StyledButton = styled.TouchableOpacity`
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 `;
 
 export const StyledTextButton = styled.Text`
@@ -45,9 +47,8 @@ export const StyledTextButton = styled.Text`
   font-weight: bold;
 `;
 
-export const StyledSignUpTextButton = styled.Text`
+export const StyledOptionTextButton = styled.Text`
   text-align: center;
-  margin-top: 20px;
   font-size: 18px;
   color: ${defaultStyle.brandGray};
   text-decoration: underline;

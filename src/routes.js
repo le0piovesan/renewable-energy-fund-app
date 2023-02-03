@@ -4,9 +4,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useSelector } from "react-redux";
 
 // Pages
+import Login from "./views/Auth/Login";
+import Register from "./views/Auth/Register";
 import Home from "./views/Home";
-import Login from "./views/Login";
-import Register from "./views/Register";
 import defaultStyle from "./defaultStyle";
 
 const Stack = createNativeStackNavigator();
@@ -14,11 +14,11 @@ const Stack = createNativeStackNavigator();
 export default AppContainer = () => {
   const selector = useSelector((state) => state);
   console.log("Redux Data: ", selector);
-  const { authenticated } = selector.auth.authenticated;
+  const currentUser = selector.auth.currentUser;
 
   return (
     <NavigationContainer>
-      {authenticated ? (
+      {currentUser ? (
         <Stack.Navigator>
           <Stack.Screen
             name="Home"

@@ -1,25 +1,20 @@
 export const types = {
-  user: "auth/user",
-  authenticated: "auth/authenticated",
+  register: "auth/register",
+  logIn: "auth/logIn",
 };
 
-const defaultValues = {
-  user: {
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    termsAgreed: false,
-  },
-  authenticated: false,
+const initialState = {
+  users: [],
+  currentUser: false,
 };
 
-export default function auth(state = defaultValues, action) {
+export default function auth(state = initialState, action) {
   switch (action.type) {
-    case types.user:
-      return { ...state, user: action.user };
-    case types.authenticated:
-      return { ...state, authenticated: action.authenticated };
+    case types.register:
+      return { ...state, users: [...state.users, action.payload] };
+
+    case types.logIn:
+      return { ...state, currentUser: action.payload };
 
     default:
       return state;
@@ -28,12 +23,11 @@ export default function auth(state = defaultValues, action) {
 
 export const Auth = {
   addUser: (user) => ({
-    type: types.user,
-    user,
+    type: types.register,
+    payload: user,
   }),
-
-  authUser: (authenticated) => ({
-    type: types.authenticated,
-    authenticated,
+  logIn: (user) => ({
+    type: types.logIn,
+    payload: user,
   }),
 };

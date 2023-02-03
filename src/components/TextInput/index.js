@@ -1,8 +1,14 @@
 import React from "react";
 import styled from "styled-components/native";
 import defaultStyle from "../../defaultStyle";
+import { Entypo } from "@expo/vector-icons";
 
-export default TextInput = ({ label, ...props }) => {
+export default TextInput = ({
+  label,
+  passwordVisible = "",
+  setPasswordVisible = "",
+  ...props
+}) => {
   return (
     <ContainerInput>
       <ContainerLabel>
@@ -10,6 +16,22 @@ export default TextInput = ({ label, ...props }) => {
           {label}
         </StyledText>
       </ContainerLabel>
+      {label === "Password" && (
+        <StyledPasswordButton
+          onPress={() => setPasswordVisible(!passwordVisible)}
+        >
+          {passwordVisible ? (
+            <Entypo name="eye" size={30} color={defaultStyle.brandSecondary} />
+          ) : (
+            <Entypo
+              name="eye-with-line"
+              size={30}
+              color={defaultStyle.brandSecondary}
+            />
+          )}
+        </StyledPasswordButton>
+      )}
+
       <StyledInput {...props} />
     </ContainerInput>
   );
@@ -41,4 +63,11 @@ const StyledInput = styled.TextInput`
 const StyledText = styled.Text`
   margin-left: 5px;
   margin-right: 5px;
+`;
+
+const StyledPasswordButton = styled.TouchableOpacity`
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 100;
 `;
