@@ -26,15 +26,18 @@ export default AppContainer = () => {
       {currentUser ? (
         <Tabs.Navigator
           initialRouteName="Home"
-          lazy={false}
           screenOptions={{
+            lazy: false,
             tabBarActiveTintColor: defaultStyle.brandPrimary,
-            style: {
+            tabBarStyle: {
               height: 70,
-              elevation: 0,
-              shadowOpacity: 0,
+              elevation: 2,
+              shadowOpacity: 2,
               paddingBottom: 7,
               paddingTop: 7,
+            },
+            tabBarLabelStyle: {
+              fontSize: 12,
             },
           }}
         >
@@ -47,7 +50,7 @@ export default AppContainer = () => {
               },
               headerTintColor: "#fff",
               tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="home" size={24} color={color} />
+                <MaterialCommunityIcons name="home" size={30} color={color} />
               ),
               title: "Home",
             }}
@@ -63,7 +66,7 @@ export default AppContainer = () => {
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons
                   name="arrow-decision-outline"
-                  size={24}
+                  size={30}
                   color={color}
                 />
               ),
@@ -79,7 +82,7 @@ export default AppContainer = () => {
               },
               headerTintColor: "#fff",
               tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="store" size={24} color={color} />
+                <MaterialCommunityIcons name="store" size={30} color={color} />
               ),
               title: "Portfolio",
             }}

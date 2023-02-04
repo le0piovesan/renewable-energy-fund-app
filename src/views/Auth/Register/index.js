@@ -43,7 +43,7 @@ export default function Register({ navigation }) {
     <Container>
       <ScrollForm scrollHidden>
         <Title>Create your account</Title>
-        <SubTitle>Quick and easy sign-up</SubTitle>
+        <SubTitle>And earn $100 ready to invest</SubTitle>
         <ContainerForm>
           <Formik
             validationSchema={registerSchema}
@@ -68,6 +68,7 @@ export default function Register({ navigation }) {
                   email,
                   password,
                   termsAgreed,
+                  account: 100,
                 });
 
                 navigation.navigate("Login");
@@ -147,11 +148,7 @@ export default function Register({ navigation }) {
                   </Text>
                 </View>
 
-                <StyledButton
-                  onPress={handleSubmit}
-                  enabled={enableButton}
-                  disabled={!enableButton}
-                >
+                <StyledButton onPress={handleSubmit} disabled={!enableButton}>
                   <StyledTextButton>Create Account</StyledTextButton>
                 </StyledButton>
               </>

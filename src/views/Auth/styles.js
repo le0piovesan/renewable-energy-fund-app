@@ -4,19 +4,21 @@ import defaultStyle from "../../defaultStyle";
 export const Container = styled.SafeAreaView`
   flex: 1;
   justify-content: center;
-  padding: 20px;
+  padding: 0px 20px;
   background-color: #fff;
 `;
 
 export const Title = styled.Text`
-  text-align: center;
+  /* text-align: center; */
+  padding-left: 10px;
   font-size: 20px;
   font-weight: bold;
   color: ${defaultStyle.brandSecondary};
 `;
 
 export const SubTitle = styled.Text`
-  text-align: center;
+  /* text-align: center; */
+  padding-left: 10px;
   font-weight: bold;
 `;
 
@@ -38,6 +40,7 @@ export const StyledButton = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 `;
 
 export const StyledTextButton = styled.Text`
