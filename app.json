@@ -7,7 +7,7 @@
     "icon": "./assets/logo-renew.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/logo-renew.png",
+      "image": "./assets/logo-label-renew.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

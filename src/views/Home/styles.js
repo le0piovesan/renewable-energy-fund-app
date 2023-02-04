@@ -7,10 +7,6 @@ export const Container = styled.SafeAreaView`
   background-color: #fff;
 `;
 
-export const ContainerHeader = styled.SafeAreaView`
-  padding: 10px;
-`;
-
 export const Title = styled.Text`
   font-size: 18px;
   color: ${defaultStyle.brandGray};
@@ -21,22 +17,11 @@ export const Bold = styled.Text`
 `;
 
 export const SectionRow = styled.View`
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding-bottom: 5px;
-`;
-
-export const Income = styled.View`
-  align-items: center;
-`;
-
-export const ContainerMain = styled.View`
-  flex: 1;
-  justify-content: center;
-  padding: 20px;
-  border-width: 1px;
-  border-color: ${defaultStyle.borderColor};
+  justify-content: ${({ leftAlign }) =>
+    leftAlign ? "space-evenly" : "space-between"};
 `;
 
 export const StyledButton = styled.TouchableOpacity`

@@ -18,7 +18,6 @@ const Tabs = createBottomTabNavigator();
 
 export default AppContainer = () => {
   const selector = useSelector((state) => state);
-  console.log("Redux Data: ", selector);
   const currentUser = selector.auth.currentUser;
 
   return (
@@ -27,6 +26,7 @@ export default AppContainer = () => {
         <Tabs.Navigator
           initialRouteName="Home"
           screenOptions={{
+            headerTitleAlign: "center",
             lazy: false,
             tabBarActiveTintColor: defaultStyle.brandPrimary,
             tabBarStyle: {
@@ -52,7 +52,7 @@ export default AppContainer = () => {
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="home" size={30} color={color} />
               ),
-              title: "Home",
+              title: "",
             }}
           />
           <Tabs.Screen
