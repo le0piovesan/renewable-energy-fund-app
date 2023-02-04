@@ -72,13 +72,6 @@ export default AppContainer = () => {
             headerTitleAlign: "center",
             lazy: false,
             tabBarActiveTintColor: defaultStyle.brandPrimary,
-            tabBarStyle: {
-              height: 70,
-              elevation: 2,
-              shadowOpacity: 2,
-              paddingBottom: 7,
-              paddingTop: 7,
-            },
             tabBarLabelStyle: {
               fontSize: 12,
             },
@@ -162,6 +155,8 @@ export default AppContainer = () => {
               headerStyle: {
                 backgroundColor: defaultStyle.brandPrimary,
               },
+              headerBackButtonMenuEnabled: false,
+              headerBackVisible: false,
               headerTintColor: "#fff",
             }}
           />

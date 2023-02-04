@@ -12,8 +12,9 @@ export const ContainerMain = styled.View`
 export const FundCard = styled.TouchableOpacity`
   padding: 20px 0px;
   margin: 2px;
-  border-right-width: 1px;
-  border-right-color: ${defaultStyle.borderColor};
+  border-width: 1px;
+  border-color: ${defaultStyle.borderColor};
+  border-radius: 20px;
 `;
 
 export const FundGraph = styled.Image`

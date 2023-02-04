@@ -1,6 +1,7 @@
 export const types = {
   register: "auth/register",
   logIn: "auth/logIn",
+  logOut: "auth/logOut",
 };
 
 const initialState = {
@@ -16,6 +17,9 @@ export default function auth(state = initialState, action) {
     case types.logIn:
       return { ...state, currentUser: action.payload };
 
+    case types.logOut:
+      return { ...state, currentUser: action.payload };
+
     default:
       return state;
   }
@@ -29,5 +33,9 @@ export const Auth = {
   logIn: (user) => ({
     type: types.logIn,
     payload: user,
+  }),
+  logOut: () => ({
+    type: types.logOut,
+    payload: false,
   }),
 };
