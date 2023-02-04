@@ -43,24 +43,6 @@ export const ContainerForm = styled.View`
   padding: 5px;
 `;
 
-export const StyledButton = styled.TouchableOpacity`
-  background-color: ${defaultStyle.brandPrimary};
-  border-width: 20px;
-  border-color: ${defaultStyle.brandPrimary};
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
-`;
-
-export const StyledTextButton = styled.Text`
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
-  font-weight: bold;
-`;
-
 export const StyledOptionTextButton = styled.Text`
   text-align: center;
   font-size: 18px;

@@ -5,8 +5,6 @@ import {
   Logo,
   Title,
   ContainerForm,
-  StyledButton,
-  StyledTextButton,
   SubTitle,
   StyledOptionTextButton,
 } from "../styles";
@@ -21,6 +19,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Auth } from "../../../redux/auth";
 import defaultStyle from "../../../defaultStyle";
+import PressableBtn from "../../../components/PressableBtn";
 
 const loginSchema = yup.object({
   email: yup.string().required(),
@@ -109,9 +108,8 @@ export default function Login({ navigation }) {
                   setPasswordVisible={setPasswordVisible}
                 />
 
-                <StyledButton onPress={handleSubmit}>
-                  <StyledTextButton>Login</StyledTextButton>
-                </StyledButton>
+                <PressableBtn onPress={handleSubmit} title={"Login"} />
+
                 {wrongUser && (
                   <Text
                     style={{

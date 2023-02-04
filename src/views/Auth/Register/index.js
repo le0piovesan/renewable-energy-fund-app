@@ -3,8 +3,6 @@ import {
   Container,
   Title,
   ContainerForm,
-  StyledButton,
-  StyledTextButton,
   SubTitle,
   StyledOptionTextButton,
 } from "../styles";
@@ -20,6 +18,7 @@ import defaultStyle from "../../../defaultStyle";
 
 import { useDispatch } from "react-redux";
 import { Auth } from "../../../redux/auth";
+import PressableBtn from "../../../components/PressableBtn";
 
 const registerSchema = yup.object({
   firstName: yup.string().required(),
@@ -172,9 +171,11 @@ export default function Register({ navigation }) {
                   </Text>
                 </View>
 
-                <StyledButton onPress={handleSubmit} disabled={!enableButton}>
-                  <StyledTextButton>Create Account</StyledTextButton>
-                </StyledButton>
+                <PressableBtn
+                  onPress={handleSubmit}
+                  title={"Create Account"}
+                  disabled={!enableButton}
+                />
               </>
             )}
           </Formik>

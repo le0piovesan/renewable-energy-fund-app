@@ -4,13 +4,16 @@ import defaultStyle from "../../../defaultStyle";
 export const ContainerMain = styled.View`
   flex: 2;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   border-width: 1px;
   border-color: ${defaultStyle.borderColor};
 `;
 
-export const FundCard = styled.View`
+export const FundCard = styled.TouchableOpacity`
   padding: 20px 0px;
+  margin: 2px;
+  border-right-width: 1px;
+  border-right-color: ${defaultStyle.borderColor};
 `;
 
 export const FundGraph = styled.Image`

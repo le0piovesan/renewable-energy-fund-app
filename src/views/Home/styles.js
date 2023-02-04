@@ -23,19 +23,3 @@ export const SectionRow = styled.View`
   justify-content: ${({ leftAlign }) =>
     leftAlign ? "space-evenly" : "space-between"};
 `;
-
-export const StyledButton = styled.TouchableOpacity`
-  background-color: ${defaultStyle.brandSecondary};
-  border-width: 10px;
-  border-color: ${defaultStyle.brandSecondary};
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const StyledTextButton = styled.Text`
-  text-align: center;
-  font-size: 12px;
-  color: #fff;
-  font-weight: bold;
-`;
