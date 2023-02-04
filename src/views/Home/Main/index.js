@@ -24,6 +24,14 @@ export default function Main({ user }) {
           height: 150,
         }}
       />
+      <Image
+        source={require("../../../../assets/nature-fund.png")}
+        resizeMode="contain"
+        style={{
+          width: 150,
+          height: 150,
+        }}
+      />
     </ContainerMain>
   );
 }

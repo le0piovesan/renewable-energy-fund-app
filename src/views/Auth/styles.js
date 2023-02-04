@@ -8,8 +8,19 @@ export const Container = styled.SafeAreaView`
   background-color: #fff;
 `;
 
+export const SectionRow = styled.View`
+  flex-direction: row;
+  align-items: center;
+  padding: 0 5px;
+`;
+
+export const Logo = styled.Image`
+  width: 50px;
+  height: 50px;
+`;
+
 export const Title = styled.Text`
-  /* text-align: center; */
+  text-align: ${({ centerText }) => (centerText ? "center" : "left")};
   padding-left: 10px;
   font-size: 20px;
   font-weight: bold;
@@ -17,7 +28,7 @@ export const Title = styled.Text`
 `;
 
 export const SubTitle = styled.Text`
-  /* text-align: center; */
+  text-align: ${({ centerText }) => (centerText ? "center" : "left")};
   padding-left: 10px;
   font-weight: bold;
 `;

@@ -8,13 +8,13 @@ import {
   SubTitle,
   StyledOptionTextButton,
 } from "../styles";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 
 import ScrollForm from "../../../components/ScrollForm";
+import TextInput from "../../../components/TextInput";
 
 import { Formik } from "formik";
 import * as yup from "yup";
-import TextInput from "../../../components/TextInput";
 import Checkbox from "expo-checkbox";
 import defaultStyle from "../../../defaultStyle";
 
@@ -32,12 +32,30 @@ const registerSchema = yup.object({
 export default function Register({ navigation }) {
   const [enableButton, setEnableButton] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const dispach = useDispatch();
 
   const createUser = (user) => {
     dispach(Auth.addUser(user));
   };
+
+  if (loading) {
+    return (
+      <Container>
+        <Image
+          source={require("../../../../assets/loading-logo.gif")}
+          resizeMode="contain"
+          style={{ width: "100%", height: "50%" }}
+        />
+        <Title centerText>Success!</Title>
+        <SubTitle centerText>
+          You can already log in into your account
+          {"\n"}and start investing
+        </SubTitle>
+      </Container>
+    );
+  }
 
   return (
     <Container>
@@ -62,6 +80,7 @@ export default function Register({ navigation }) {
               termsAgreed,
             }) => {
               try {
+                setLoading(true);
                 await createUser({
                   firstName,
                   lastName,
@@ -71,9 +90,14 @@ export default function Register({ navigation }) {
                   account: 100,
                 });
 
-                navigation.navigate("Login");
+                // Mock loading success
+                setTimeout(() => {
+                  setLoading(false);
+                  navigation.navigate("Login");
+                }, 3000);
               } catch (err) {
                 console.log(err);
+                setLoading(false);
               }
             }}
           >

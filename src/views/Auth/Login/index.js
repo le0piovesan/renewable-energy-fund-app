@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import {
   Container,
+  SectionRow,
+  Logo,
   Title,
   ContainerForm,
   StyledButton,
@@ -8,7 +10,7 @@ import {
   SubTitle,
   StyledOptionTextButton,
 } from "../styles";
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View, Image } from "react-native";
 
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -46,8 +48,26 @@ export default function Login({ navigation }) {
   return (
     <Container>
       <ScrollForm scrollHidden>
-        <Title>Welcome!</Title>
-        <SubTitle>Already have an account?</SubTitle>
+        <SectionRow>
+          <Logo
+            source={require("../../../../assets/logo-renew.png")}
+            resizeMode="contain"
+          />
+          <View>
+            <Title>
+              Welcome to{" "}
+              <Text
+                style={{
+                  color: defaultStyle.brandPrimary,
+                }}
+              >
+                ReNew Funds
+              </Text>
+              !
+            </Title>
+            <SubTitle>Already have an account?</SubTitle>
+          </View>
+        </SectionRow>
         <ContainerForm>
           <Formik
             innerRef={formikRef}
@@ -93,7 +113,14 @@ export default function Login({ navigation }) {
                   <StyledTextButton>Login</StyledTextButton>
                 </StyledButton>
                 {wrongUser && (
-                  <Text style={{ color: "red" }}>User not found</Text>
+                  <Text
+                    style={{
+                      color: defaultStyle.brandDanger,
+                      textAlign: "center",
+                    }}
+                  >
+                    User not found
+                  </Text>
                 )}
               </>
             )}
