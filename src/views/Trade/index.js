@@ -1,5 +1,4 @@
 import React from "react";
-import { Text } from "react-native";
 import { Container, Title, SubTitle } from "../Portfolio/styles";
 
 export default function Trade({ navigation }) {

@@ -13,8 +13,6 @@ import {
   MoreInfo,
   ContainerFooter,
 } from "./styles";
-import defaultStyle from "../../defaultStyle";
-import { useSelector } from "react-redux";
 
 import PressableBtn from "../../components/PressableBtn";
 

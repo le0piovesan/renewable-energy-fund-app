@@ -8,7 +8,7 @@ import {
   SubTitle,
   StyledOptionTextButton,
 } from "../styles";
-import { Text, TouchableOpacity, View, Image } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 import { Formik } from "formik";
 import * as yup from "yup";

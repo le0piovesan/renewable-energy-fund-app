@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Image, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
 import { Title, Bold, SectionRow } from "../styles";
 import { ContainerMain, FundCard, FundGraph, DescriptionCard } from "./styles";
 import { MaterialIcons } from "@expo/vector-icons";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { Title, Bold, SectionRow } from "../styles";
+import { Bold, SectionRow } from "../styles";
 import { ContainerHeader, Income } from "./styles";
 import { Ionicons } from "@expo/vector-icons";
 import defaultStyle from "../../../defaultStyle";
