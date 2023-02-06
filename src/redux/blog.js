@@ -7,7 +7,12 @@ const initialState = {
     {
       title: "Are you a reNEW fund investor?",
       description: "Here are some pro tips to begin",
-      linkTo: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      linkTo: "https://crowdform.studio/",
+    },
+    {
+      title: "Join our community",
+      description: "Now you can join our community",
+      linkTo: "https://github.com/le0piovesan",
     },
     {
       title: "When should I sell my funds?",

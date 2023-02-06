@@ -14,7 +14,7 @@ const initialState = {
     },
     {
       name: "Solar Fund",
-      value: 1032.23,
+      value: 986.61,
       graph: require("../../assets/solar-fund.png"),
       icon: require("../../assets/solar-icon.png"),
       plotBackground: require("../../assets/solar-plot-bg.png"),
@@ -22,7 +22,7 @@ const initialState = {
     },
     {
       name: "Nature Fund",
-      value: 1032.23,
+      value: 1122.95,
       graph: require("../../assets/nature-fund.png"),
       icon: require("../../assets/nature-icon.png"),
       plotBackground: require("../../assets/nature-plot-bg.png"),

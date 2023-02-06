@@ -9,7 +9,11 @@ export default function Header({ user }) {
   return (
     <ContainerHeader>
       <SectionRow>
-        <Ionicons name="person-circle-outline" size={35} color="#000" />
+        <Ionicons
+          name="person-circle-outline"
+          size={35}
+          color={defaultStyle.brandSecondary}
+        />
 
         <Income>
           <Text
@@ -41,7 +45,11 @@ export default function Header({ user }) {
             </SectionRow>
           </View>
         </Income>
-        <Ionicons name="settings-outline" size={32} color="#000" />
+        <Ionicons
+          name="settings-outline"
+          size={32}
+          color={defaultStyle.brandSecondary}
+        />
       </SectionRow>
     </ContainerHeader>
   );

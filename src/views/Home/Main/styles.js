@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import defaultStyle from "../../../defaultStyle";
+import { LinearGradient } from "expo-linear-gradient";
 
 export const ContainerMain = styled.View`
   flex: 2;
@@ -10,11 +11,18 @@ export const ContainerMain = styled.View`
 `;
 
 export const FundCard = styled.TouchableOpacity`
-  padding: 20px 0px;
-  margin: 2px;
+  margin: 10px 2px;
   border-width: 1px;
   border-color: ${defaultStyle.borderColor};
   border-radius: 20px;
+`;
+
+export const FundBackground = styled(LinearGradient)`
+  opacity: 0.8;
+  border-color: ${defaultStyle.borderColor};
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 100%;
 `;
 
 export const FundGraph = styled.Image`

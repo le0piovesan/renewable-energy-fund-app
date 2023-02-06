@@ -8,8 +8,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useSelector } from "react-redux";
 import defaultStyle from "./defaultStyle";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
-// Pages
 import Login from "./views/Auth/Login";
 import Register from "./views/Auth/Register";
 import Home from "./views/Home";
@@ -85,22 +83,9 @@ export default AppContainer = () => {
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="home" size={30} color={color} />
               ),
+              title: "Home",
             }}
           />
-          {/* <Tabs.Screen
-            name="Home"
-            component={Home}
-            options={{
-              headerStyle: {
-                backgroundColor: defaultStyle.brandPrimary,
-              },
-              headerTintColor: "#fff",
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="home" size={30} color={color} />
-              ),
-              title: "",
-            }}
-          /> */}
           <Tabs.Screen
             name="Trade"
             component={Trade}
